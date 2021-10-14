@@ -1,0 +1,58 @@
+.slider {
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg_c_bricks.png) repeat-x scroll 0 0px
+        rgba(0, 0, 0, 0);
+    height: 450px;
+    max-height: 100%;
+    overflow: hidden;
+    &-item {
+        width: 980px;
+        height: 100%;
+        margin: auto;
+        position: relative;
+        &__image {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+            &.active {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &__control {
+            position: absolute;
+            width: 100%;
+            top: 40%;
+            cursor: pointer;
+            color: #fff;
+            .icon {
+                position: absolute;
+                font-size: 5rem;
+                opacity: 0.6;
+                transition: all 0.2s ease;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .left {
+                left: 0;
+            }
+            .right {
+                right: 0;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .dot {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: red;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
