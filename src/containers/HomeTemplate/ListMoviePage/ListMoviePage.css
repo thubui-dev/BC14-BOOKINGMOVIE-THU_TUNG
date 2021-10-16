@@ -1,0 +1,17 @@
+.detailStyle {
+  background: #f2f3e1;
+}
+
+.detailMovie {
+  justify-content: center;
+}
+
+.detailMovie--slick {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.slick-arrow::before {
+  color: red;
+  font-size: 30px;
+}

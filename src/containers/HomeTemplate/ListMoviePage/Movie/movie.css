@@ -1,0 +1,23 @@
+.cardMovie {
+  display: flex;
+	flex-direction: column;
+	width: 200px;
+	height: 300px;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.cardMovie--img {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+}
+
+.cardMovie--name {
+	background: green;
+	width: 100%;
+	margin-top: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

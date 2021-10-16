@@ -1,0 +1,41 @@
+.header {
+    width: 100%;
+    margin: 0 auto;
+    background: url(../../../../img/bgtop.png) repeat-x scroll left bottom transparent;
+    background-size: 10px 135px;
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 28px;
+}
+
+.header--navbar {
+    width: 900px;
+    height: 60px;
+}
+
+.header--button {
+    background-image: url(../../../../img/icon_sprite@2x.png);
+
+}
+
+.header--label {
+    color: #636363;
+    text-align: center;
+}
+
+.navbar-dark .navbar-nav .nav-link.header--nav-link {
+    color: rgb(34, 34, 34);
+    display: block;
+    font-family: Verdana,Arial,sans-serif;
+    font-weight: bold;
+    line-height: 30px;
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navbar-expand-md.header--navbar-expand {
+    display: inline-block;
+}
