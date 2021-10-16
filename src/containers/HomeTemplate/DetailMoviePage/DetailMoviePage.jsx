@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { actFetchDetailMovie, actFetchShowingMovie } from "./Modules/actions";
 import Loader from "../../../component/Loader";
+import "./DetailMovie.css";
 
 function DetailMoviePage() {
   const { id } = useParams();
@@ -22,25 +23,27 @@ function DetailMoviePage() {
   if (loading) return <Loader />;
 
   return (
-    <div className="container">
-      <h3>Movie Details</h3>
-      <div className="row">
-        <div className="col-md-6">
-          <img className="img-fluid" src={data && data.hinhAnh} alt="" />
-        </div>
-        <div className="col-md-6">
-          <table className="table">
-            <tbody>
-              <tr>
-                <td>Tên phim</td>
-                <td>{data?.tenPhim}</td>
-              </tr>
-              <tr>
-                <td>Mô tả</td>
-                <td>{data?.moTa}</td>
-              </tr>
-            </tbody>
-          </table>
+    <div className="detailMovie">
+      <div className="container">
+        <h3>Movie Details</h3>
+        <div className="row">
+          <div className="col-md-6">
+            <img className="img-fluid" src={data && data.hinhAnh} alt="" />
+          </div>
+          <div className="col-md-6">
+            <table className="table">
+              <tbody>
+                <tr>
+                  <td>Tên phim</td>
+                  <td>{data?.tenPhim}</td>
+                </tr>
+                <tr>
+                  <td>Mô tả</td>
+                  <td>{data?.moTa}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       {/* <div className="row">

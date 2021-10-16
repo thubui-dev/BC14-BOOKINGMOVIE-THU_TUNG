@@ -10,24 +10,12 @@ import "./ListMoviePage.css";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={style}
-      onClick={onClick}
-    />
-  );
+  return <div className={className} style={style} onClick={onClick} />;
 }
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={style}
-      onClick={onClick}
-    />
-  );
+  return <div className={className} style={style} onClick={onClick} />;
 }
 
 const settings = {
@@ -49,21 +37,21 @@ function ListMoviePage(props) {
     fetchData();
   }, [fetchData]);
   return (
-    <div className="container">
-      <div className="row detailMovie">
-        {loading ? (
-          <Loader />
-        ) : (
-          <div className="detailMovie--slick">
-            <Slider {...settings}>
-              {data?.map((movie) => {
-                return (
-                    <Movie key={movie.maPhim} movie={movie} />
-                );
-              })}
-            </Slider>
-          </div>
-        )}
+    <div className="detailStyle">
+      <div className="container">
+        <div className="row detailMovie">
+          {loading ? (
+            <Loader />
+          ) : (
+            <div className="detailMovie--slick">
+              <Slider {...settings}>
+                {data?.map((movie) => {
+                  return <Movie key={movie.maPhim} movie={movie} />;
+                })}
+              </Slider>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

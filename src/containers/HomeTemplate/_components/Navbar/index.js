@@ -33,7 +33,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link header--nav-link" href="/">
-                Lịch chiếu
+                Liên hệ
               </a>
             </li>
             <li className="nav-item">
