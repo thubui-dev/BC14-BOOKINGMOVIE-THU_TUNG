@@ -9,6 +9,7 @@ import LoginPage from "./containers/HomeTemplate/Login";
 import RegisterPage from "./containers/HomeTemplate/Register";
 import BookingPage from "./containers/HomeTemplate/BookingTicket";
 import Navbar from "./containers/HomeTemplate/_components/Navbar";
+import Footer from "./containers/HomeTemplate/_components/Footer";
 import { ToastContainer } from 'react-toastify';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="" component={PageNotFound} />
       </Switch>
       <ToastContainer />
+      <Footer />
     </BrowserRouter>
   );
 }
