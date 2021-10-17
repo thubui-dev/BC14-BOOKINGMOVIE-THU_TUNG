@@ -25,6 +25,22 @@
     text-align: center;
 }
 
+.header--loginUser {
+    position: relative;
+    margin-left: 35px;
+}
+
+.header--loginUser::before {
+    width: 25px;
+    content: "";
+    background-image: url(../../../../img/icon_login25.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -23px;
+    bottom: 15px;
+    height: 25px;
+}
+
 .navbar-dark .navbar-nav .nav-link.header--nav-link {
     color: rgb(34, 34, 34);
     display: block;
