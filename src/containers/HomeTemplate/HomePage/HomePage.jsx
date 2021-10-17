@@ -13,6 +13,7 @@ export default function HomePage() {
                 timeOut={3000}
             />
             <ListMoviePage />
+            <Footer />
         </div>
     )
 }
