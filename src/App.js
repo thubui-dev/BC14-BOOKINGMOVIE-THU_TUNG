@@ -6,9 +6,10 @@ import HomePage from "./containers/HomeTemplate/HomePage";
 import ListMoviePage from "./containers/HomeTemplate/ListMoviePage";
 import DetailMoviePage from "./containers/HomeTemplate/DetailMoviePage";
 import LoginPage from "./containers/HomeTemplate/Login";
+import RegisterPage from "./containers/HomeTemplate/Register";
 import BookingPage from "./containers/HomeTemplate/BookingTicket";
 import Navbar from "./containers/HomeTemplate/_components/Navbar";
-
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -19,9 +20,11 @@ function App() {
         <Route path={ROUTES.movieList} component={ListMoviePage} />
         <Route path={`${ROUTES.movieDetail}/:id`} component={DetailMoviePage} />
         <Route path={ROUTES.login} component={LoginPage} />
+        <Route path={ROUTES.register} component={RegisterPage} />
         <Route path={ROUTES.bookingTicket} component={BookingPage} />
         <Route path="" component={PageNotFound} />
       </Switch>
+      <ToastContainer />
     </BrowserRouter>
   );
 }

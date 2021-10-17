@@ -4,6 +4,7 @@ const ROUTES = {
   movieDetail: '/movie-detail',
   bookingTicket: '/booking-ticket',
   login: '/login',
+  register: '/register',
 };
 
 export default ROUTES;

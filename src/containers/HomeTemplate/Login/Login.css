@@ -1,0 +1,33 @@
+.loginPage {
+    background: #f2f3e1;
+    height: 800px;
+}
+
+.loginPage--title {
+    background: red;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+}
+
+.loginPage--item {
+    width: 450px;
+    border-radius: 5px;
+}
+.registerPage--btn {
+    text-align: center;
+}
+
+.loginPage--button {
+    background: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.loginPage--register {
+    text-align: center;
+    margin-top: 5px;
+}
