@@ -1,0 +1,68 @@
+.footer {
+    width: 100%;
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/bg-bottom-footer.jpg) repeat-x scroll
+        center bottom rgba(0, 0, 0, 0);
+    margin-top: 30px;
+    padding-bottom: 120px;
+}
+.footer-policy-content,
+.footer-address-content,
+.footer-brand-content {
+    width: 980px;
+    margin: auto;
+}
+.footer-brand {
+    width: 100%;
+    padding: 20px 0px;
+    border-top: 4px solid #222;
+    display: block;
+}
+.footer-brand-content {
+    background-image: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/brand-type-film-footer_ver2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 40px;
+    text-indent: -99999px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.footer-policy {
+    width: 100%;
+    padding: 20px 0px;
+    border-bottom: 4px solid #222;
+    border-top: 4px solid #222;
+    display: block;
+}
+
+.footer-title {
+    color: #636363;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-content p,
+.footer-address-cgv p {
+    margin-bottom: 0;
+}
+
+.footer-content p a {
+    text-decoration: none;
+    color: #636363;
+    font-size: 16px;
+    line-height: 22px;
+}
+.footer-content-socail .footer-content-socail-icon {
+    font-size: 39px;
+}
+
+.footer-address-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.footer-address-logo img {
+    width: 200px;
+    height: 100px;
+}
