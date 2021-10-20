@@ -1,10 +1,13 @@
 import React from "react";
 import "./header.css";
 import ROUTES from "../../../../routes";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
+import { actLogout } from "../../Login/modules/actions";
 
 export default function Navbar(props) {
   const loginData = useSelector((state) => state.loginReducer.data);
+  const dispatch = useDispatch();
   return (
     <div className="header">
       <div className="header--navbar">
@@ -30,43 +33,77 @@ export default function Navbar(props) {
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link header--nav-link" href="/">
+                <NavLink
+                  exact
+                  activeClassName="active"
+                  className="nav-link header--nav-link"
+                  to={ROUTES.home}
+                >
                   Trang chủ
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link header--nav-link" href="/">
+                <NavLink
+                  activeClassName="active"
+                  className="nav-link header--nav-link"
+                  to="/lienhe"
+                >
                   Liên hệ
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link header--nav-link" href="/">
+                <NavLink
+                  activeClassName="active"
+                  className="nav-link header--nav-link"
+                  to="/ungdung"
+                >
                   Ứng dụng
-                </a>
+                </NavLink>
               </li>
               {loginData ? (
-                <li className="nav-item">
-                  <a className="nav-link header--nav-link" href="/">
-                    {loginData?.hoTen}
-                  </a>
-                </li>
+                <>
+                  <li className="nav-item">
+                    <NavLink
+                      activeClassName="active"
+                      className="nav-link header--nav-link"
+                      to="/"
+                    >
+                      {loginData?.hoTen}
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      activeClassName="active"
+                      className="nav-link header--nav-link"
+                      to={`${ROUTES.home}${ROUTES.login}`}
+                      onClick={() => {
+                        localStorage.removeItem("User");
+                        dispatch(actLogout());
+                      }}
+                    >
+                      Log Out
+                    </NavLink>
+                  </li>
+                </>
               ) : (
                 <>
                   <li className="nav-item header--loginUser">
-                    <a
+                    <NavLink
+                      activeClassName="active"
                       className="nav-link header--nav-link"
-                      href={ROUTES.login}
+                      to={`${ROUTES.home}${ROUTES.login}`}
                     >
                       Đăng nhập
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="nav-item">
-                    <a
+                    <NavLink
+                      activeClassName="active"
                       className="nav-link header--nav-link"
-                      href={ROUTES.register}
+                      to={`${ROUTES.home}${ROUTES.register}`}
                     >
                       Đăng kí
-                    </a>
+                    </NavLink>
                   </li>
                 </>
               )}

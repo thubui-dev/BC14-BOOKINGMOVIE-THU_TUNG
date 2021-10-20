@@ -41,7 +41,7 @@
     height: 25px;
 }
 
-.navbar-dark .navbar-nav .nav-link.header--nav-link {
+.header--navbar .navbar-dark .navbar-nav .nav-link.header--nav-link {
     color: rgb(34, 34, 34);
     display: block;
     font-family: Verdana,Arial,sans-serif;
@@ -50,6 +50,10 @@
     position: relative;
     text-decoration: none;
     text-transform: capitalize;
+}
+
+.navbar-dark .navbar-nav .nav-link.header--nav-link.active {
+    color: red;
 }
 
 .navbar-expand-md.header--navbar-expand {
