@@ -75,6 +75,7 @@ function App() {
         <Route path="" component={PageNotFound} />
       </Switch>
       <ToastContainer />
+      <Footer />
     </BrowserRouter>
   );
 }
