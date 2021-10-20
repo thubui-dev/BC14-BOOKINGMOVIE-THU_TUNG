@@ -70,7 +70,7 @@ function LoginPage(props) {
               </button>
               <div className="loginPage--register">
                 Bạn chưa có tài khoản ?
-                <NavLink to={ROUTES.register} className="cursor-pointer">
+                <NavLink to={`${ROUTES.home}${ROUTES.register}`} className="cursor-pointer">
                   Đăng kí
                 </NavLink>
               </div>

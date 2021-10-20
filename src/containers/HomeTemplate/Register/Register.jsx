@@ -47,22 +47,18 @@ function RegisterPage() {
       case "taiKhoan":
         if (value && value.length <= 4) {
           mess = " Độ dài ký tự từ 5 trở lên";
+          console.log(value);
         }
         break;
 
       case "matKhau":
-        if (
-          value &&
-          !value.match(
-            !/^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{6,10}$/
-          )
-        ) {
+        if (value && value.length <= 4) {
           mess = " Độ dài ký tự từ 5 trở lên";
         }
         break;
 
       case "hoTen":
-        if (value && !value.match(!/^[a-zA-Z ]{2,30}$/)) {
+        if (value && !value.match(/^[a-zA-Z ]{2,30}$/)) {
           mess = "Họ và tên không hợp lệ";
         }
         break;
@@ -74,7 +70,7 @@ function RegisterPage() {
         break;
 
       case "soDt":
-        if (value && value.length <= 10) {
+        if (value && value.length < 10) {
           mess = " SĐT phải ít nhất 10 số";
         }
         break;
@@ -92,7 +88,7 @@ function RegisterPage() {
       .post("QuanLyNguoiDung/DangKy", state)
       .then((result) => {
         toast("register success");
-        history.push(ROUTES.login);
+        history.push(`${ROUTES.home}${ROUTES.login}`);
       })
       .catch((error) => {
         // dispatch(actRegisterUserFailed(error));
@@ -127,7 +123,9 @@ function RegisterPage() {
               onChange={handleOnChange}
               onBlur={handleErrors}
             />
-            <span className="registerPage--error">{formErrors.birthdayTime}</span>
+            <span className="registerPage--error">
+              {formErrors.birthdayTime}
+            </span>
           </div>
         </div>
 
