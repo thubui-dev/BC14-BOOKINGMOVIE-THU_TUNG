@@ -25,7 +25,23 @@
     text-align: center;
 }
 
-.navbar-dark .navbar-nav .nav-link.header--nav-link {
+.header--loginUser {
+    position: relative;
+    margin-left: 35px;
+}
+
+.header--loginUser::before {
+    width: 25px;
+    content: "";
+    background-image: url(../../../../img/icon_login25.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -23px;
+    bottom: 15px;
+    height: 25px;
+}
+
+.header--navbar .navbar-dark .navbar-nav .nav-link.header--nav-link {
     color: rgb(34, 34, 34);
     display: block;
     font-family: Verdana,Arial,sans-serif;
@@ -34,6 +50,10 @@
     position: relative;
     text-decoration: none;
     text-transform: capitalize;
+}
+
+.navbar-dark .navbar-nav .nav-link.header--nav-link.active {
+    color: red;
 }
 
 .navbar-expand-md.header--navbar-expand {
