@@ -1,0 +1,21 @@
+.buttonSearch {
+    margin-top: 5px;
+    text-align: end;
+    height: 55px;
+} 
+
+.buttonSearch--input {
+    width: 500px;
+    height: 40px;
+    border: solid 1px white;
+    border-radius: 5px;
+}
+
+.buttonSearch--submit {
+    width: 90px;
+    height: 40px;
+    border: solid 1px white;
+    background-color: rgb(0, 132, 255);
+    border-radius: 5px;
+    margin-left: 4px;
+}
