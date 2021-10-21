@@ -1,18 +1,20 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { actFetchDetailMovie, actFetchShowingMovie } from "./Modules/actions";
+import { actFetchDetailMovie } from "./Modules/actions";
 import Loader from "../../../component/Loader";
+import Modal from '../_components/Modal/Modal'
 import "./DetailMovie.css";
 
 function DetailMoviePage() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { loading, data } = useSelector((state) => state.detailMovieReducer);
+  console.log(data)
 
   const fetchData = () => {
     dispatch(actFetchDetailMovie(id));
-    dispatch(actFetchShowingMovie(id));
+    // dispatch(actFetchShowingMovie(id));
   };
 
   useEffect(() => {
@@ -25,7 +27,7 @@ function DetailMoviePage() {
   return (
     <div className="detailMovie">
       <div className="container">
-        <h3>Movie Details</h3>
+        <h3>Nội Dung Phim</h3>
         <div className="row">
           <div className="col-md-6">
             <img className="img-fluid" src={data && data.hinhAnh} alt="" />
@@ -43,6 +45,7 @@ function DetailMoviePage() {
                 </tr>
               </tbody>
             </table>
+            <Modal />
           </div>
         </div>
       </div>
