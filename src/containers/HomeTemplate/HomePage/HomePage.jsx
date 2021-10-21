@@ -10,7 +10,7 @@ export default function HomePage() {
             <Carousel
                 data={data}
                 control={true}
-                auto={false}
+                auto={true}
                 timeOut={3000}
             />
             <ListMoviePage />

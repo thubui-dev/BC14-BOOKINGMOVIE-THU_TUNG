@@ -36,36 +36,37 @@ const actDetailMovieFailed = (error) => {
   };
 };
 
-export const actFetchShowingMovie = (id) => {
-  return (dispatch) => {
-    dispatch(actDetailShowingRequest());
-    api
-      .get(`QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${id}`)
-      .then((result) => {
-        dispatch(actDetailShowingSuccess(result.data.content));
-      })
-      .catch((error) => {
-        dispatch(actDetailShowingFailed(error));
-      });
-  };
-};
+// export const actFetchShowingMovie = (id) => {
+//   return (dispatch) => {
 
-const actDetailShowingRequest = () => {
-  return {
-    type: ActionType.DETAIL_SHOWING_REQUEST,
-  };
-};
+//     dispatch(actDetailShowingRequest());
+//     api
+//       .get(`QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${id}`)
+//       .then((result) => {
+//         dispatch(actDetailShowingSuccess(result.data.content));
+//       })
+//       .catch((error) => {
+//         dispatch(actDetailShowingFailed(error));
+//       });
+//   };
+// };
 
-const actDetailShowingSuccess = (data) => {
-  return {
-    type: ActionType.DETAIL_SHOWING_SUCCESS,
-    payload: data,
-  };
-};
+// const actDetailShowingRequest = () => {
+//   return {
+//     type: ActionType.DETAIL_SHOWING_REQUEST,
+//   };
+// };
 
-const actDetailShowingFailed = (error) => {
-  return {
-    type: ActionType.DETAIL_SHOWING_FAILED,
-    payload: error,
-  };
-};
+// const actDetailShowingSuccess = (data) => {
+//   return {
+//     type: ActionType.DETAIL_SHOWING_SUCCESS,
+//     payload: data,
+//   };
+// };
+
+// const actDetailShowingFailed = (error) => {
+//   return {
+//     type: ActionType.DETAIL_SHOWING_FAILED,
+//     payload: error,
+//   };
+// };
