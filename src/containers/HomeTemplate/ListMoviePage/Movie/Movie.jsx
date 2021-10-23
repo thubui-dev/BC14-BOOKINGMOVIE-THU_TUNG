@@ -9,12 +9,14 @@ export default function Movie(props) {
 
   return (
     <div className="cardMovie">
-      <img className="cardMovie--img" src={movie.hinhAnh} alt="" />
       <Link
         className="btn btn-success cardMovie--name"
         to={`${ROUTES.home}${ROUTES.movieDetail}/${movie.maPhim}`}
       >
-        {movie.tenPhim}
+        <img className="cardMovie--img" src={movie.hinhAnh} alt="" />
+        <p>
+          {movie.tenPhim.length > 20 ? movie.tenPhim.slice(0, 15) + '...' : movie.tenPhim}
+        </p>
       </Link>
     </div>
   );
