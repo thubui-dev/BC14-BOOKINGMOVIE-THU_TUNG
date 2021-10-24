@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { actFetchDetailMovie } from "./Modules/actions";
 import Loader from "../../../component/Loader";
 import Modal from '../_components/Modal/Modal'
 import "./DetailMovie.css";
-import { CloseCircleOutlined } from '@ant-design/icons';
 import ModalTrailer from "../_components/Modal/ModalTrailer"
 
 function DetailMoviePage() {

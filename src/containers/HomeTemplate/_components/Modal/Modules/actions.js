@@ -3,7 +3,6 @@ import api from "./../../../../../utils/apiUtils";
 
 export const actFetchShowingMovie = (id) => {
   return (dispatch) => {
-    console.log("id", id)
     dispatch(actModalShowingRequest());
     api
       .get(`QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${id}`)

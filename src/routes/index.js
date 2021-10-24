@@ -1,7 +1,7 @@
 const ROUTES = {
   home: '/home',
   movieDetail: '/movie-detail',
-  bookingTicket: '/booking-ticket',
+  bookingTicket: '/booking-ticket/id',
   login: '/login',
   register: '/register',
   dashboard: '/dashboard',

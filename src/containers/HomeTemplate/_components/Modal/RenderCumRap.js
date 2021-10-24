@@ -21,5 +21,4 @@ const RenderCumRap = ({ cumRap }) => {
     )
 }
 
-
 export default RenderCumRap
