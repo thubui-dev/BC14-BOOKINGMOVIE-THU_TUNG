@@ -10,7 +10,7 @@ function DetailMoviePage() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { loading, data } = useSelector((state) => state.detailMovieReducer);
-  console.log(data)
+
 
   const fetchData = () => {
     dispatch(actFetchDetailMovie(id));
@@ -49,39 +49,6 @@ function DetailMoviePage() {
           </div>
         </div>
       </div>
-      {/* <div className="row">
-        <div className="col-md-12">
-          <table className="table">
-            <thead>
-              <tr>
-                <td>Cụm rạp</td>
-                <td>Tên rạp</td>
-                <td>Ngày chiếu</td>
-                <td>Giờ chiếu</td>
-              </tr>
-            </thead>
-            <tbody>
-              {data?.lichChieu?.map((item) => (
-                <tr key={item.maLichChieu}>
-                  <td>{item.thongTinRap.tenCumRap}</td>
-                  <td>{item.thongTinRap.tenRap}</td>
-                  <td>
-                    {new Date(item.ngayChieuGioChieu).toLocaleDateString()}
-                  </td>
-                  <td>
-                    {new Date(item.ngayChieuGioChieu).toLocaleTimeString()}
-                  </td>
-                  <td>
-                    <a href="#dat-ve" className="btn btn-success">
-                      Booking
-                    </a>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div> */}
     </div>
   );
 }

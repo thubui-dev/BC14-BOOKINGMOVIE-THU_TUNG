@@ -39,23 +39,34 @@ export default function AdminNavbar(props) {
                   Dashboard
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item dropdown">
                 <NavLink
                   activeClassName="active"
-                  className="nav-link header--nav-link"
+                  className="nav-link dropdown-toggle header--nav-link"
+                  id="navbardrop"
+                  data-toggle="dropdown"
                   to={`${ROUTES.dashboard}${ROUTES.films}`}
                 >
                   Films
                 </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  activeClassName="active"
-                  className="nav-link header--nav-link"
-                  to={`${ROUTES.dashboard}${ROUTES.showTime}`}
-                >
-                  Show time
-                </NavLink>
+                <div className="dropdown-menu">
+                  <NavLink
+                    activeClassName="active"
+                    className="nav-link dropdown-item header--nav-link"
+                    id="navbardrop"
+                    to={`${ROUTES.dashboard}${ROUTES.films}`}
+                  >
+                    Films
+                  </NavLink>
+                  <NavLink
+                    activeClassName="active"
+                    className="nav-link dropdown-item header--nav-link"
+                    id="navbardrop"
+                    to={`${ROUTES.dashboard}${ROUTES.addFilm}`}
+                  >
+                    Add Film
+                  </NavLink>
+                </div>
               </li>
             </ul>
           </div>
