@@ -31,3 +31,8 @@
 	width: 100%;
 	width: 240px !important;
 }
+@media (max-width: 739px) {
+	.cardMovie {
+		margin: 0 10px;
+	}
+}

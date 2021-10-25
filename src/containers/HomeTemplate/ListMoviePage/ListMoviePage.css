@@ -15,3 +15,19 @@
   color: red;
   font-size: 30px;
 }
+@media (min-width: 740px) and (max-width: 1023px) {
+  .detailMovie--slick {
+    height: 650px;
+  }
+}
+
+@media (max-width: 739px) {
+  .slick-next {
+    right: 40%;
+    top: 100%;
+  }
+  .slick-prev {
+    left: 40%;
+    top: 100%;
+  }
+}
