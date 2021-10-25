@@ -2,17 +2,17 @@ import React from "react";
 import "./header.css";
 import ROUTES from "../../../../routes";
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { actLogout } from "../../Login/modules/actions";
 
-export default function Navbar(props) {
+export default function Navbar() {
   const loginData = useSelector((state) => state.loginReducer.data);
   const dispatch = useDispatch();
   return (
     <div className="header">
       <div className="header--navbar">
         {/* Brand */}
-        <a className="navbar-brand" href="/">
+        <a className="navbar-brand" href="/home">
           <img
             src="https://www.cgv.vn/skin/frontend/cgv/default/images/cgvlogo.png"
             alt="CGV Cinemas"
@@ -110,6 +110,16 @@ export default function Navbar(props) {
             </ul>
           </div>
         </nav>
+      </div>
+      <div className="header-search d-flex justify-content-center align-items-center">
+        <div className="header-search-left">
+          <img alt="kênh Cine" src="https://www.cgv.vn/media/wysiwyg/2019/AUG/kenhcine.gif" />
+        </div>
+        <div className="header-search-right">
+          <Link to='/movie-detail'>
+            <img alt="" src="https://www.cgv.vn/media/wysiwyg/news-offers/mua-ve_ngay.png"></img>
+          </Link>
+        </div>
       </div>
     </div>
   );

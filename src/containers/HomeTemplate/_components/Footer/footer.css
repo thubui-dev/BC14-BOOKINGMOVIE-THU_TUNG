@@ -8,8 +8,8 @@
 .footer-policy-content,
 .footer-address-content,
 .footer-brand-content {
-    width: 980px;
-    margin: auto;
+    max-width: 1140px;
+    margin: 0 auto;
 }
 .footer-brand {
     width: 100%;

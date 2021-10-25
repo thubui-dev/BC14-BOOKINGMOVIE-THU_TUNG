@@ -1,3 +1,47 @@
 .detailMovie {
+    width: 100%;
+    height: 100%;
     background: #f2f3e1;
+}
+.detailMovie-title {
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+}
+.detailMovie-img {
+    width: 215px;
+    height: 318px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.detailMovie-bold {
+    font-weight: bold;
+}
+
+.detailMovie-modal {
+    display: flex;
+    margin-top: 20px;
+}
+.detailMovie--slick {
+    margin-top: 20px;
+}
+.detailStyle-title {
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/bg_h3_line.jpg) repeat-x scroll left
+        center rgba(0, 0, 0, 0);
+    height: 60px;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.detailMovie .detailStyle-title h2 {
+    background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cgv/h3_movie_selection.gif) no-repeat scroll
+        center center / 406px 41px #fdfcf0;
+    display: inline-block;
+    width: 425px;
+}
+.detailStyle-title h2 {
+    height: 60px;
+    text-indent: -99999px;
 }

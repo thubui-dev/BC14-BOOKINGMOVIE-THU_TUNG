@@ -1,5 +1,5 @@
 .cardMovie {
-  display: flex;
+	display: flex;
 	flex-direction: column;
 	width: 200px;
 	height: 300px;
@@ -20,4 +20,14 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+.cardMovie p {
+	margin-top: 6px;
+	text-transform: uppercase;
+}
+
+.slick-slide {
+	width: 100%;
+	width: 240px !important;
 }
