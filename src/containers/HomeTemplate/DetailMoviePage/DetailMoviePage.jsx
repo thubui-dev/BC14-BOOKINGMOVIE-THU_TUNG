@@ -12,6 +12,7 @@ function DetailMoviePage() {
   const dispatch = useDispatch();
   const { loading, data } = useSelector((state) => state.detailMovieReducer);
 
+
   const fetchData = () => {
     dispatch(actFetchDetailMovie(id));
     // dispatch(actFetchShowingMovie(id));

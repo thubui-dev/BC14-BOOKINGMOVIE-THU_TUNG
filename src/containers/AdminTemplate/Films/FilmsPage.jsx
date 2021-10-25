@@ -1,64 +1,101 @@
-import React from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { actDeleteFilm, actFetchShowFilm } from "./modules/actions";
 import "./films.css";
+import Search from "./Search";
+import {
+  EditOutlined,
+  DeleteOutlined,
+  CalendarOutlined,
+} from "@ant-design/icons";
+import { NavLink } from "react-router-dom";
+import ROUTES from "../../../routes";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
+function FilmsPage(props) {
+  const dispatch = useDispatch();
+  const { data } = useSelector((state) => state.showFilmReducer);
 
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
+  useEffect(() => {
+    const fetchData = () => {
+      dispatch(actFetchShowFilm());
+    };
+    fetchData();
+  }, [dispatch]);
 
-export default function FilmPage() {
+  const handleDelete = (id) => {
+    dispatch(actDeleteFilm(id));
+  };
+
   return (
-		<>
-		<div className="buttonAdd">
-			<button className="mt-5">Thêm phim </button>
-		</div>
-		<div className="buttonSearch">
-			<input type="search" className="buttonSearch--input" placeholder="Search here"/>
-  		<button type="submit" className="buttonSearch--submit">Search</button>
-		</div>
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 10 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Mã phim</TableCell>
-            <TableCell align="right">Hình ảnh</TableCell>
-            <TableCell align="right">Tên phim</TableCell>
-            <TableCell align="right">Mô tả</TableCell>
-            <TableCell align="right">Hành động</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
-              <TableCell align="right">{row.carbs}</TableCell>
-              <TableCell align="right">{row.protein}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-		</>
+    <>
+      <h3>Quản lý phim</h3>
+      <button className="btn btn-warning addFilmBtn">
+        <NavLink
+          to={`${ROUTES.dashboard}${ROUTES.addFilm}`}
+          className="cursor-pointer"
+        >
+          Add film
+        </NavLink>
+      </button>
+      <Search />
+      <div className="row">
+        <div className="col-md-12">
+          <table className="table">
+            <thead>
+              <tr>
+                <td>Mã phim</td>
+                <td>Hình ảnh</td>
+                <td>Tên phim</td>
+                <td className="descripFilm">Mô tả</td>
+                <td>Hành động</td>
+              </tr>
+            </thead>
+            <tbody>
+              {data?.map((item) => (
+                <tr key={item.maPhim}>
+                  <td>{item.maPhim}</td>
+                  <td>
+                    <img className="listFilm" src={item.hinhAnh} alt="" />
+                  </td>
+                  <td>{item.tenPhim}</td>
+                  <td>
+                    {item.moTa.lenght > 50
+                      ? item.moTa.substr(0, 50) + "..."
+                      : item.moTa}
+                  </td>
+                  <td>
+                    <NavLink
+                      to={`${ROUTES.dashboard}${ROUTES.editFilm}/${item.maPhim}`}
+                      className="cursor-pointer"
+                    >
+                      <EditOutlined style={{color: 'blue'}}/>
+                    </NavLink>
+
+                    <span
+                      onClick={() => {
+                        if (
+                          window.confirm(
+                            "Bạn có chắc muốn xóa phim " + item.tenPhim
+                          )
+                        ) {
+                          handleDelete(item.maPhim);
+                        }
+                      }}
+                    >
+                      <DeleteOutlined style={{color: 'red'}}/>
+                    </span>
+                    <NavLink to={`${ROUTES.dashboard}${ROUTES.showTime}/${item.maPhim}`}>
+                      <CalendarOutlined  style={{color: 'green'}}/>
+                    </NavLink>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </>
   );
 }
+
+export default FilmsPage;

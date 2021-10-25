@@ -19,3 +19,19 @@
     border-radius: 5px;
     margin-left: 4px;
 }
+
+.addFilmBtn {
+    margin-top: 5px;
+    width: 100px;
+    height: 50px;
+}
+
+.descripFilm {
+    text-align: center;
+}
+
+.listFilm {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+}

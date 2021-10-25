@@ -47,7 +47,6 @@ function RegisterPage() {
       case "taiKhoan":
         if (value && value.length <= 4) {
           mess = " Độ dài ký tự từ 5 trở lên";
-          console.log(value);
         }
         break;
 
@@ -94,8 +93,6 @@ function RegisterPage() {
         // dispatch(actRegisterUserFailed(error));
       });
   };
-
-  console.log(formErrors);
 
   if (loading) return <Loader />;
   return (

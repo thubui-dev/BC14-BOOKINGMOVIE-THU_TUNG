@@ -14,7 +14,6 @@ api.interceptors.request.use(
         ? "Bearer " + JSON.parse(localStorage.getItem("User")).accessToken
         : "",
     };
-
     return config;
   },
   (errors) => {
