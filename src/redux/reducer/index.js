@@ -10,6 +10,7 @@ import editFilmReducer from "../../containers/AdminTemplate/Films/Edit/modules/r
 import showTimeReducer from "../../containers/AdminTemplate/Showtime/modules/reducer";
 
 
+import BookingMoveReducer from '../../containers/HomeTemplate/BookingTicket/Modules/reducer'
 const rootReducer = combineReducers({
     listMovieReducer,
     detailMovieReducer,
@@ -20,6 +21,9 @@ const rootReducer = combineReducers({
     addFilmReducer,
     editFilmReducer,
     showTimeReducer,
+    BookingMoveReducer,
+    loginReducer,
+    registerUserReducer,
 });
 
 export default rootReducer;

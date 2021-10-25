@@ -53,6 +53,7 @@ const Footer = () => {
 
     return (
         <div className='footer'>
+        
             <div className="footer-brand">
                 <div className="footer-brand-content">
 

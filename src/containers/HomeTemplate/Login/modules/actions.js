@@ -42,6 +42,7 @@ export const actLoginApi = (user, history) => {
         }
 
         //Lưu trạng thái login
+
         localStorage.setItem("User", JSON.stringify(result.data.content));
       })
       .catch((error) => {
@@ -50,20 +51,20 @@ export const actLoginApi = (user, history) => {
   };
 };
 
-const actLoginRequest = () => {
+export const actLoginRequest = () => {
   return {
     type: ActionType.LOGIN_REQUEST,
   };
 };
 
-const actLoginSuccess = (data) => {
+export const actLoginSuccess = (data) => {
   return {
     type: ActionType.LOGIN_SUCCESS,
     payload: data,
   };
 };
 
-const actLoginFailed = (error) => {
+export const actLoginFailed = (error) => {
   return {
     type: ActionType.LOGIN_FAILED,
     payload: error,

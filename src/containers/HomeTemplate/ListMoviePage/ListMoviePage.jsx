@@ -23,7 +23,7 @@ const settings = {
   centerMode: true,
   infinite: true,
   centerPadding: "60px",
-  slidesToShow: 3,
+  slidesToShow: 4,
   speed: 500,
   rows: 2,
   // slidesPerRow: 2,
@@ -39,15 +39,18 @@ function ListMoviePage(props) {
   return (
     <div className="detailStyle">
       <div className="container">
-        <div className="row detailMovie">
+        <div className="detailMovie">
+          <div className="detailStyle-title">
+            <h2>movie selection</h2>
+          </div>
           {loading ? (
             <Loader />
           ) : (
             <div className="detailMovie--slick">
               <Slider {...settings}>
-                {data?.map((movie) => {
-                  return <Movie key={movie.maPhim} movie={movie} />;
-                })}
+                {data?.map((movie) => (
+                  <Movie key={movie.maPhim} movie={movie} />
+                ))}
               </Slider>
             </div>
           )}

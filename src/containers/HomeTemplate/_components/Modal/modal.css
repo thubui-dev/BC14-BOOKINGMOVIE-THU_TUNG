@@ -1,4 +1,70 @@
-.button {
+.modal-logo {
+    width: 200px;
+}
+.modal-render-rap {
+    border-bottom: 2px solid #000;
+}
+
+.modal-render-rap-item {
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+.modal-render-rap-left {
+    width: 100px;
+    height: 100px;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+.cumrap {
+    min-width: 320px;
+}
+.cumrap-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.cumrap-img {
+    width: 50px;
+    height: 50px;
+}
+.cumrap-text {
+    margin-left: 10px;
+}
+.cumrap-text p {
+    margin: 0;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.showtimes {
+    padding-bottom: 10px;
+}
+
+.showtimes .showtimes-btn {
+    border: 1px solid #108f3e;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    margin-right: 10px;
+    max-width: 33.333%;
+}
+.showtimes-btn:focus {
+    outline: none;
+    border: 1px solid #e71a0f;
+}
+
+.showtimes-btn a {
+    color: #000;
+}
+
+.showtimes-btn a:hover {
+    text-decoration: none;
+    color: #e71a0f;
+}
+
+.button,
+.button-trailer {
     background: #e71a0f;
     display: inline-block;
     padding: 6px 2px;
@@ -12,9 +78,19 @@
     text-transform: uppercase;
     vertical-align: middle;
     white-space: nowrap;
+    margin-right: 20px;
 }
-.button:hover {
+.button:focus,
+.button-trailer:focus {
+    outline: none;
     border: none;
+}
+
+.button-trailer > span {
+    border: 1px solid #f07469;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
 }
 .button > span {
     border: 1px solid #f07469;
@@ -24,4 +100,11 @@
     background: url(https://www.cgv.vn/skin/frontend/cgv/default/images/bg-cate-booking.png) no-repeat scroll left
         center rgba(0, 0, 0, 0);
     border-radius: 5px;
+}
+
+.modal-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
 }

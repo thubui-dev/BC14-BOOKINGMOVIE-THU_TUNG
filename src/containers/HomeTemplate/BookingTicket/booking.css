@@ -1,0 +1,153 @@
+.checkout {
+    margin-top: 50px;
+}
+
+.checkout-classList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 580px;
+    margin: 0 auto;
+}
+
+.checkout-class {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 60px;
+}
+.checkout-left-title {
+    margin-top: 0px;
+    text-align: center;
+    padding: 5px;
+    background: #231d1c;
+    width: 100%;
+}
+.checkout-left img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+.checkout-left-title h1 {
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 32px;
+    padding: 0;
+    margin: 0;
+}
+.checkout-right {
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.checkout-right-movie img {
+    width: 100%;
+    height: 200px;
+}
+.checkout-right-movie h4 {
+    margin-bottom: 30px;
+}
+hr {
+    margin: 10px;
+}
+.checkout-right-title {
+    display: flex;
+    align-items: center;
+}
+.checkout-right-item {
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.checkout-right-title p:nth-child(1) {
+    padding-right: 6px;
+}
+
+.checkout-right-title p:last-child {
+    border-left: 1px solid #000;
+    padding-left: 6px;
+}
+
+.checkout-right-mony span:last-child {
+    color: red;
+    font-size: 20px;
+}
+
+.checkout-right-button {
+    width: 48%;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: red;
+    padding: 10px;
+    text-decoration: none;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+.ghe {
+    width: 30px;
+    height: 30px;
+    background: #3e515d;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 30px;
+    color: #fff;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.gheVip {
+    background: #f7b500;
+}
+
+.gheDangChon {
+    background: #44c020;
+}
+.gheDaDuocDat {
+    background: #ccc;
+    cursor: no-drop;
+}
+.gheBanDat {
+    background: rgb(26, 169, 169);
+    cursor: no-drop;
+}
+.gheNguoiKhacDangChon {
+    background: pink;
+    cursor: no-drop;
+}
+.ghe-guide {
+    width: 15px;
+    height: 15px;
+    cursor: default;
+    margin: auto;
+}
+.checkout-right-policy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.icon-c18 {
+    width: 28px;
+    height: 22px;
+    display: inline-block;
+    background: url(https://www.galaxycine.vn/website/images/ic-c18.png) no-repeat;
+    background-size: cover;
+}
+.notice {
+    color: #ff0033;
+    padding-left: 8px;
+    font-size: 14px;
+}

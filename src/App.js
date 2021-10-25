@@ -35,7 +35,7 @@ function HomeTemplate() {
         <Route path={`${path}${ROUTES.login}`} component={LoginPage} />
         <Route path={`${path}${ROUTES.register}`} component={RegisterPage} />
         <Route
-          path={`${path}${ROUTES.bookingTicket}`}
+          path={`${path}${ROUTES.bookingTicket}/:id`}
           component={BookingPage}
         />
         <Route path="/" component={HomePage} />
