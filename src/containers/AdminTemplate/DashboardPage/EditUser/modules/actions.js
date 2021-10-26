@@ -43,11 +43,10 @@ export const actEditUploadUser = (user) => {
   return (dispatch) => {
     dispatch(actEditUploadUserRequest());
     api
-      .post("QuanLyNguoiDung/CapNhatThongTinNguoiDung",user)
+      .post("QuanLyNguoiDung/CapNhatThongTinNguoiDung", user)
       //success
       .then((result) => {
         dispatch(actEditUploadUserSuccess(result.data.content));
-        alert('Cập nhật tài khoản thành công!')
       })
 
       //error
