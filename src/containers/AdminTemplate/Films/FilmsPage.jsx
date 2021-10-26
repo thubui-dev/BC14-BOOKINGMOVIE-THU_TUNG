@@ -84,7 +84,7 @@ function FilmsPage(props) {
                     >
                       <DeleteOutlined style={{color: 'red'}}/>
                     </span>
-                    <NavLink to={`${ROUTES.dashboard}${ROUTES.showTime}/${item.maPhim}`}>
+                    <NavLink to={`${ROUTES.dashboard}${ROUTES.showTime}/${item.maPhim}/${item.tenPhim}`}>
                       <CalendarOutlined  style={{color: 'green'}}/>
                     </NavLink>
                   </td>

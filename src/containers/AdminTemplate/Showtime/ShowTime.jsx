@@ -46,6 +46,8 @@ export default function ShowTime(props) {
     formik.setFieldValue("giaVe", value);
   };
 
+  console.log(props.match.params);
+  
   return (
     <div className="container">
       <Form
@@ -56,7 +58,7 @@ export default function ShowTime(props) {
         initialValues={{ remember: true }}
         autoComplete="off"
       >
-        <h3>Lịch chiếu phim</h3>
+        <h3>Lịch chiếu phim - {props.match.params.tenPhim}</h3>
         <Form.Item label="Hệ thống rạp">
           <Select
             options={heThongRap?.map((item, index) => {

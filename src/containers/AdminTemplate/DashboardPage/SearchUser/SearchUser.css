@@ -1,0 +1,9 @@
+.searchForm {
+    display: flex;
+    justify-content: center;
+}
+
+.searchForm--btn {
+    height: 40px;
+    margin-left: 5px;
+}

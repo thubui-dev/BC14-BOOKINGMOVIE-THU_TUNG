@@ -1,10 +1,13 @@
 import React from "react";
 import "./adminNavbar.css";
 import ROUTES from "../../../../routes";
-// import { useSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { actLogout } from "../../../HomeTemplate/Login/modules/actions";
 
 export default function AdminNavbar(props) {
+  const loginData = useSelector((state) => state.loginReducer.data);
+  const dispatch = useDispatch();
   return (
     <div className="header">
       <div className="header--navbar">
@@ -68,6 +71,53 @@ export default function AdminNavbar(props) {
                   </NavLink>
                 </div>
               </li>
+              {loginData ? (
+                <>
+                  <li className="nav-item">
+                    <NavLink
+                      activeClassName="active"
+                      className="nav-link header--nav-link"
+                      to="/"
+                    >
+                      {loginData?.hoTen}
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      activeClassName="active"
+                      className="nav-link header--nav-link"
+                      to={`${ROUTES.home}${ROUTES.login}`}
+                      onClick={() => {
+                        localStorage.removeItem("User");
+                        dispatch(actLogout());
+                      }}
+                    >
+                      Log Out
+                    </NavLink>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li className="nav-item header--loginUser">
+                    <NavLink
+                      activeClassName="active"
+                      className="nav-link header--nav-link"
+                      to={`${ROUTES.home}${ROUTES.login}`}
+                    >
+                      Đăng nhập
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink
+                      activeClassName="active"
+                      className="nav-link header--nav-link"
+                      to={`${ROUTES.home}${ROUTES.register}`}
+                    >
+                      Đăng kí
+                    </NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </nav>
