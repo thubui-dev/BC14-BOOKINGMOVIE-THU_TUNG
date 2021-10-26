@@ -151,3 +151,20 @@ hr {
     padding-left: 8px;
     font-size: 14px;
 }
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .checkout-classList {
+        width: 100%;
+    }
+}
+
+@media (max-width: 739px) {
+    .checkout-classList {
+        width: 100%;
+    }
+    .col-8,
+    .col-4 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+}

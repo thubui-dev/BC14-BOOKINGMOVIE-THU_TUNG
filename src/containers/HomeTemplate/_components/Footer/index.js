@@ -53,16 +53,14 @@ const Footer = () => {
 
     return (
         <div className='footer'>
-        
             <div className="footer-brand">
                 <div className="footer-brand-content">
-
                 </div>
             </div>
             <div className="footer-policy">
                 <div className="footer-policy-content">
                     <div className="row">
-                        <div className="col-3">
+                        <div className="col-md-3 mb-4 col-sm-12">
                             <div className="footer-title">
                                 <p>CGV Việt Nam</p>
                             </div>
@@ -70,13 +68,13 @@ const Footer = () => {
                                 {
                                     cgvInfo.map((item, index) => (
                                         <p key={index}>
-                                            <Link to={item.path}>{item.display}</Link>
+                                            <Link className='footer-content-p' to={item.path}>{item.display}</Link>
                                         </p>
                                     ))
                                 }
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 mb-4 col-sm-12">
                             <div className="footer-title">
                                 <p>Điều khoản sử dụng</p>
                             </div>
@@ -84,13 +82,13 @@ const Footer = () => {
                                 {
                                     cgvPolicy.map((item, index) => (
                                         <p key={index}>
-                                            <Link to={item.path}>{item.display}</Link>
+                                            <Link className='footer-content-p' to={item.path}>{item.display}</Link>
                                         </p>
                                     ))
                                 }
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 mb-4 col-sm-12">
                             <div className="footer-title">
                                 <p>Kết nối với chúng tôi</p>
                             </div>
@@ -108,14 +106,14 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-3">
+                        <div className="col-md-3 mb-4 col-sm-12">
                             <div className="footer-title">
                                 <p>Chăm sóc khách hàng</p>
                             </div>
                             <div className="footer-content">
-                                <p>Hotline: 1900 6017</p>
-                                <p>Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết)</p>
-                                <p>Email hỗ trợ: hoidap@cgv.vn</p>
+                                <p className='footer-content-p'>Hotline: 1900 6017</p>
+                                <p className='footer-content-p'>Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết)</p>
+                                <p className='footer-content-p'>Email hỗ trợ: hoidap@cgv.vn</p>
                             </div>
                         </div>
                     </div>

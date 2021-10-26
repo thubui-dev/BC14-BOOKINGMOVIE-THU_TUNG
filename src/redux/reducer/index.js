@@ -22,8 +22,6 @@ const rootReducer = combineReducers({
     editFilmReducer,
     showTimeReducer,
     BookingMoveReducer,
-    loginReducer,
-    registerUserReducer,
 });
 
 export default rootReducer;

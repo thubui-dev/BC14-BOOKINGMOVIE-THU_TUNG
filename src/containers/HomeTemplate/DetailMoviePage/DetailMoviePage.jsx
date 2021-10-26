@@ -30,20 +30,20 @@ function DetailMoviePage() {
       <div className="container">
         <h3 className='detailMovie-title'>Nội Dung Phim</h3>
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-4">
             <img className="detailMovie-img" src={data && data.hinhAnh} alt='' />
           </div>
-          <div className="col-md-9">
+          <div className="col-md-8">
             <h3 className="detailMovie-title">{data?.tenPhim}</h3>
             <div>
               <span className='detailMovie-bold'>Ngày khởi chiếu: </span>
-              <span>
+              <span className='detailMovie-time'>
                 {new Date(data?.ngayKhoiChieu).toLocaleDateString()}
               </span>
             </div>
             <div>
               <span className='detailMovie-bold'>Mô tả: </span>
-              <span>{data?.moTa}</span>
+              <span className='detailMovie-time'>{data?.moTa}</span>
             </div>
             <div className="detailMovie-modal">
               <Modal />
