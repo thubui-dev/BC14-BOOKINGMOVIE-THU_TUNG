@@ -41,7 +41,11 @@ export default function EditUser() {
 
   const handleEditUser = (event) => {
     event.preventDefault();
-    dispatch(actEditUploadUser(state));
+
+    const userEdit = { ...state }
+    userEdit.maNhom = 'GP14'
+
+    dispatch(actEditUploadUser(userEdit));
 
     toast("Edit user success");
     history.push(`${ROUTES.dashboard}`);
@@ -78,7 +82,7 @@ export default function EditUser() {
           {state?.maLoaiNguoiDung && <Select
             options={[
               { label: "Khách hàng", value: "KhachHang" },
-              { label: "Quản trị", value: "Admin" },
+              { label: "Quản trị", value: "QuanTri" },
             ]}
             name="maLoaiNguoiDung"
             onChange={onSelect}
