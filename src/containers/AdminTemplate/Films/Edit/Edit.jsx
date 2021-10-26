@@ -4,7 +4,6 @@ import "antd/dist/antd.css";
 import { useSelector, useDispatch } from "react-redux";
 import { useFormik } from "formik";
 import { actEditFilm, actEditUploadApi } from "./modules/actions";
-import {actFetchShowFilm} from "../modules/actions";
 import moment from "moment";
 import { useHistory } from "react-router";
 import ROUTES from "../../../../routes";
@@ -50,7 +49,7 @@ const Edit = (props) => {
       //Upload edit film
       dispatch(actEditUploadApi(formData));
 
-      dispatch(actFetchShowFilm());
+    
       history.push(`${ROUTES.dashboard}${ROUTES.films}`);
     },
   });

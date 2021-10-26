@@ -12,6 +12,8 @@ import Navbar from "./containers/HomeTemplate/_components/Navbar";
 import Footer from "./containers/HomeTemplate/_components/Footer";
 import { ToastContainer } from "react-toastify";
 import DashboardPage from "./containers/AdminTemplate/DashboardPage";
+import AddUsers from "./containers/AdminTemplate/DashboardPage/AddUsers/AddUsers";
+import EditUser from "./containers/AdminTemplate/DashboardPage/EditUser/EditUser";
 import FilmsPage from "./containers/AdminTemplate/Films";
 import AddFilm from "./containers/AdminTemplate/Films/AddFilms.js/AddFilm";
 import Edit from "./containers/AdminTemplate/Films/Edit/Edit";
@@ -54,6 +56,14 @@ function AdminTemplate() {
       <AdminNavbar />
       <Switch>
         <Route
+          path={`${path}${ROUTES.addUser}`}
+          component={AddUsers}
+        />
+        <Route
+          path={`${path}${ROUTES.editUser}/:taiKhoan`}
+          component={EditUser}
+        />
+        <Route
           path={`${path}${ROUTES.films}`}
           component={FilmsPage}
         />
@@ -65,9 +75,10 @@ function AdminTemplate() {
           path={`${path}${ROUTES.editFilm}/:id`}
           component={Edit}
         />
-        <Route path={`${path}${ROUTES.showTime}/:id`} component={ShowTime} />
+        <Route path={`${path}${ROUTES.showTime}/:id/:tenPhim`} component={ShowTime} />
         <Route path="/" component={DashboardPage} />
       </Switch>
+      <Footer />
     </>
   )
 }

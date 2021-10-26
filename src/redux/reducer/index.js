@@ -8,7 +8,9 @@ import showFilmReducer from "../../containers/AdminTemplate/Films/modules/reduce
 import addFilmReducer from "../../containers/AdminTemplate/Films/AddFilms.js/modules/reducer";
 import editFilmReducer from "../../containers/AdminTemplate/Films/Edit/modules/reducer";
 import showTimeReducer from "../../containers/AdminTemplate/Showtime/modules/reducer";
-
+import getUserReducer from "../../containers/AdminTemplate/DashboardPage/modules/reducer";
+import addUserReducer from "../../containers/AdminTemplate/DashboardPage/AddUsers/modules/reducer";
+import editUserReducer from "../../containers/AdminTemplate/DashboardPage/EditUser/modules/reducer";
 
 import BookingMoveReducer from '../../containers/HomeTemplate/BookingTicket/Modules/reducer'
 const rootReducer = combineReducers({
@@ -22,6 +24,9 @@ const rootReducer = combineReducers({
     editFilmReducer,
     showTimeReducer,
     BookingMoveReducer,
+    getUserReducer,
+    addUserReducer,
+    editUserReducer,
 });
 
 export default rootReducer;

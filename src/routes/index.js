@@ -5,6 +5,8 @@ const ROUTES = {
   login: '/login',
   register: '/register',
   dashboard: '/dashboard',
+  addUser: '/add-user',
+  editUser: '/edit-user',
   films: '/films',
   addFilm: '/add-film',
   showTime: '/show-time',
