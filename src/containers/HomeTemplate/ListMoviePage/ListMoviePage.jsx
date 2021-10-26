@@ -25,7 +25,7 @@ const settings = {
   centerPadding: "60px",
   slidesToShow: 4,
   speed: 500,
-  rows: 2,
+  rows: 1,
   // slidesPerRow: 2,
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,

@@ -54,7 +54,7 @@ const BasicModal = () => {
                 aria-describedby="modal-modal-description"
             >
 
-                <Box sx={style}>
+                <Box sx={style} className='modal-elx'>
                     <Close
                         className="modal-icon"
                         onClick={handleClose}
